@@ -1,6 +1,6 @@
 name: Propose Incentivized Task
 description: Propose an incentivized task.
-title: "[TASK] "
+title: "[INCENTIVIZED TASK PROPOSAL] "
 labels:
   - "Incentivized Task Proposal"
 
@@ -10,7 +10,7 @@ body:
       value: |
         Thank you for proposing an incentivized task.
 
-        Please fill out all required fields. Issues with incomplete information may be rejected.
+        Please fill out all required fields to the best of your knowledge.
 
   - type: textarea
     id: summary

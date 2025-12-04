@@ -1,6 +1,6 @@
-name: Add Incentivized Task
+name: Create Incentivized Task
 description: Create an incentivized task.
-title: "[TASK] "
+title: "[INCENTIVIZED TASK] "
 labels:
   - "Incentivized Task"
 
@@ -8,9 +8,16 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thank you for proposing an incentivized task.
-
         Please fill out all required fields. Issues with incomplete information may be rejected.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the task and its goal.
+      placeholder: "What should be done and why does it matter?"
+    validations:
+      required: true
 
   - type: input
     id: reward
@@ -62,19 +69,22 @@ body:
     attributes:
       label: Pull request required?
       description: >
-        Does this task require a code change via PR, or is it e.g. research/planning?
+        Does this task require a code change via PR?
       options:
         - "Yes"
         - "No"
     validations:
       required: true
 
-  - type: textarea
-    id: summary
+  - type: dropdown
+    id: repo_or_gist_required
     attributes:
-      label: Summary
-      description: Briefly describe the task and its goal.
-      placeholder: "What should be done and why does it matter?"
+      label: Repository or Gist required?
+      description: >
+        Does this task require a dedicated repository a Gist with results?
+      options:
+        - "Yes"
+        - "No"
     validations:
       required: true
 
