@@ -5,11 +5,6 @@ labels:
   - "Incentivized Task"
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Please fill out all required fields. Issues with incomplete information may be rejected.
-
   - type: textarea
     id: summary
     attributes:
@@ -71,8 +66,8 @@ body:
       description: >
         Does this task require a code change via PR?
       options:
-        - "Yes"
         - "No"
+        - "Yes"
     validations:
       required: true
 
@@ -83,8 +78,8 @@ body:
       description: >
         Does this task require a dedicated repository a Gist with results?
       options:
-        - "Yes"
         - "No"
+        - "Yes"
     validations:
       required: true
 
