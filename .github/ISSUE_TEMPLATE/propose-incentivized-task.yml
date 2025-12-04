@@ -1,0 +1,38 @@
+name: Propose Incentivized Task
+description: Propose an incentivized task.
+title: "[TASK] "
+labels:
+  - "Incentivized Task Proposal"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing an incentivized task.
+
+        Please fill out all required fields. Issues with incomplete information may be rejected.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the task and its goal.
+      placeholder: "What should be done and why does it matter?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details & acceptance criteria
+      description: >
+        Provide a clear description, scope, and acceptance criteria for this incentivized task.
+      placeholder: |
+        - Background / context
+        - Exact scope
+        - What is *in* scope
+        - What is explicitly *out* of scope
+        - Acceptance criteria (what must be true for the task to be considered done)
+      render: markdown
+    validations:
+      required: true

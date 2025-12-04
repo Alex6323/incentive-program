@@ -1,0 +1,95 @@
+name: Add Incentivized Task
+description: Create an incentivized task.
+title: "[TASK] "
+labels:
+  - "Incentivized Task"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing an incentivized task.
+
+        Please fill out all required fields. Issues with incomplete information may be rejected.
+
+  - type: input
+    id: reward
+    attributes:
+      label: Proposed reward (in IOTA)
+      description: >
+        Suggested reward amount in IOTA tokens for completing this task.
+        This is a proposal; maintainers may adjust it.
+      placeholder: "e.g. 5000"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this task?
+      options:
+        - low
+        - medium
+        - high
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Complexity
+      description: Estimated implementation complexity.
+      options:
+        - easy
+        - medium
+        - hard
+    validations:
+      required: true
+
+  - type: input
+    id: delivery_date
+    attributes:
+      label: Desired delivery date (YYYY-MM-DD)
+      description: >
+        Target date for completion. This is used for planning only.
+      placeholder: "2025-01-31"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: pr_required
+    attributes:
+      label: Pull request required?
+      description: >
+        Does this task require a code change via PR, or is it e.g. research/planning?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe the task and its goal.
+      placeholder: "What should be done and why does it matter?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details & acceptance criteria
+      description: >
+        Provide a clear description, scope, and acceptance criteria for this incentivized task.
+      placeholder: |
+        - Background / context
+        - Exact scope
+        - What is *in* scope
+        - What is explicitly *out* of scope
+        - Acceptance criteria (what must be true for the task to be considered done)
+      render: markdown
+    validations:
+      required: true
